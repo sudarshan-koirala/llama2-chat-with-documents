@@ -1,4 +1,4 @@
-# chat-with-website
+# Llama2-chat-with-documents
 Simple Chainlit app to have interaction with your documents.
 
 ### Chat with your documents 🚀
