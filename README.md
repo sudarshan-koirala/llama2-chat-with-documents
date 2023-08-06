@@ -4,7 +4,7 @@ Simple Chainlit app to have interaction with your documents.
 ### Chat with your documents 🚀
 - [Huggingface model](https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/blob/main/llama-2-7b-chat.ggmlv3.q8_0.bin) as Large Language model
 - [LangChain](https://python.langchain.com/docs/get_started/introduction.html) as a Framework for LLM
-- [Streamlit](https://docs.chainlit.io/overview) for deploying.
+- [Chainlit](https://docs.chainlit.io/overview) for deploying.
 - [GGML](https://github.com/ggerganov/ggml) to run in commodity hardware (cpu)
 - [CTransformers](https://github.com/marella/ctransformers) to load the model.
 
