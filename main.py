@@ -11,7 +11,7 @@ prompt_template = """Use the following pieces of context to answer the users que
 If you don't know the answer, just say that you don't know, don't try to make up an answer.
 ALWAYS return a "SOURCES" part in your answer.
 The "SOURCES" part should be a reference to the source of the document from which you got your answer.
-xample of your response should be:
+The example of your response should be:
 
 Context: {context}
 Question: {question}
@@ -60,7 +60,7 @@ def load_model(
     model_path="model/llama-2-7b-chat.ggmlv3.q8_0.bin",
     model_type="llama",
     max_new_tokens=512,
-    temperature=0.5,
+    temperature=0.7,
 ):
     """
     Load a locally downloaded model.
@@ -202,11 +202,11 @@ async def process_chat_message(message):
     callback_handler.answer_reached = True
     response = await qa_chain.acall(message, callbacks=[callback_handler])
     bot_answer = response["result"]
-    source_documents = bot_answer["source_documents"]
+    source_documents = response["source_documents"]
 
     if source_documents:
-        answer += f"\nSources:" + str(source_documents)  # type: ignore
+        bot_answer += f"\nSources:" + str(source_documents)
     else:
-        answer += "\nNo sources found"  # type: ignore
+        bot_answer += "\nNo sources found"
 
-    await cl.Message(content=answer).send()
+    await cl.Message(content=bot_answer).send()
