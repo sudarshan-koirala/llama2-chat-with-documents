@@ -27,9 +27,9 @@ You must have Python 3.9 or later installed. Earlier versions of python may not 
    HUGGINGFACEHUB_API_TOKEN=your_huggingface_api_token
    ```
    
-3. Create a virtualenv and activate it
+3. Create a virtualenv with conda and activate it. First make sure that you have conda installed. Then run the following command.
    ```
-   python3 -m venv .venv && source .venv/bin/activate
+   conda create -n .venv python=3.11 -y && source activate .venv
    ```
 
 4. Run the following command in the terminal to install necessary python packages:
@@ -39,7 +39,7 @@ You must have Python 3.9 or later installed. Earlier versions of python may not 
 
 5. Run the following command in your terminal to create the embeddings and store it locally:
    ```
-   python3 run ingest.py
+   python3 ingest.py
    ```
 
 6. Run the following command in your terminal to run the app UI:
