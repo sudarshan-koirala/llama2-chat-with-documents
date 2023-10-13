@@ -1,6 +1,8 @@
 # Llama2-chat-with-documents
 Simple Chainlit app to have interaction with your documents.
 
+## [Youtube video covering this notebook](https://youtu.be/VPk-at5oqAY?si=xzBk0EstmkWPaUpH)
+
 ### Chat with your documents 🚀
 - [Huggingface model](https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/blob/main/llama-2-7b-chat.ggmlv3.q8_0.bin) as Large Language model
 - [LangChain](https://python.langchain.com/docs/get_started/introduction.html) as a Framework for LLM
