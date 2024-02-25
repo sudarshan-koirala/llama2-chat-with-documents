@@ -200,7 +200,7 @@ async def process_chat_message(message):
         stream_final_answer=True, answer_prefix_tokens=["FINAL", "ANSWER"]
     )
     callback_handler.answer_reached = True
-    response = await qa_chain.acall(message, callbacks=[callback_handler])
+    response = await qa_chain.acall(message.content, callbacks=[callback_handler])
     bot_answer = response["result"]
     source_documents = response["source_documents"]
 
